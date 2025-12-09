@@ -194,7 +194,6 @@ st.markdown("Strategic analysis of demand sensitivity to optimize pricing and ma
 elasticity_label = "Elastic" if abs(elasticity) > 1 else "Inelastic"
 
 with st.container(border=True):
-    st.subheader(f"Key Insight: Demand is Highly {elasticity_label}")
     st.markdown(f"""
     The model calculates a **Price Elasticity of {elasticity:.2f}**. 
     This indicates high sensitivity to price changes. A **10% decrease in price** correlates with a **{abs(elasticity)*10:.1f}% increase in enrollment volume**.
@@ -204,7 +203,7 @@ with st.container(border=True):
     st.markdown("**Methodology (Log-Log Regression):**")
     st.latex(r"\ln(Q) = \alpha + \beta \cdot \ln(P) + \epsilon")
     st.markdown(f"""
-    **Onde (Variáveis):**
+    **Where (Variables):**
     *   $Q$: Quantidade (Número de Matrículas)
     *   $P$: Preço (Ticket Médio)
     *   $\\beta$: Coeficiente de Elasticidade ({elasticity:.2f})
